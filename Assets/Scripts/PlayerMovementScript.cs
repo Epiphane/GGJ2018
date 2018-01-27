@@ -10,6 +10,8 @@ public class PlayerMovementScript : MonoBehaviour {
     public GameObject wohPrefab;
     public int wohsPerLoop = 4;
 
+    public Transform sprite;
+
     private bool moving = false;
     private float lastTime = 0.0f;
 
@@ -33,6 +35,7 @@ public class PlayerMovementScript : MonoBehaviour {
         Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 
         GetComponent<Rigidbody2D>().velocity = velocity;
+        sprite.rotation = Quaternion.FromToRotation(Vector3.up, velocity);
 
         float MIN_TO_MOVE = 0.5f;
         float speed = velocity.magnitude;
@@ -70,7 +73,7 @@ public class PlayerMovementScript : MonoBehaviour {
     public void Woh (Vector3 playerDirection) {
         GameObject woh = GameObject.Instantiate(wohPrefab);
 
-        woh.transform.position = transform.position;
+        woh.transform.position = transform.position - playerDirection.normalized * 0.4f;
         woh.transform.rotation = Quaternion.FromToRotation(Vector3.up, playerDirection);
     }
 }
