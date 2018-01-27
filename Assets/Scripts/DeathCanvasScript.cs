@@ -13,6 +13,7 @@ public class DeathCanvasScript : MonoBehaviour {
     public Transform toDrop;
     public InputField message;
     public Button continueButton;
+    public PlayerScript player;
 
     public float animationTime = 0.0f;
 
@@ -20,12 +21,12 @@ public class DeathCanvasScript : MonoBehaviour {
     private bool isInputting = false;
 
     void Start () {
-        gameObject.SetActive(false);
-
         Reset ();
 	}
 
     void Reset() {
+        gameObject.SetActive(false);
+
         animationTime = 0;
         background.color = new Color(0, 0, 0, 0);
         toDrop.localPosition = new Vector3(0, 1250, 0);
@@ -72,7 +73,9 @@ public class DeathCanvasScript : MonoBehaviour {
 
     public void ShowDeath(Vector2 deathPosition, string reason) {
         this.deathPosition = deathPosition;
-        deathReason.text = reason;
+
+        if (deathReason != null)
+            deathReason.text = reason;
 
         gameObject.SetActive(true);
         isInputting = true;
@@ -83,8 +86,18 @@ public class DeathCanvasScript : MonoBehaviour {
     }
 
     public void OnContinue() {
-        backend.ReportDeath(deathPosition, message.text, GoNext);
+        if (message != null) {
+            backend.ReportDeath(deathPosition, message.text, GoNext);
 
-        isInputting = false;
+            isInputting = false;
+        }
+        else {
+            GoNext();
+        }
+    }
+
+    public void OnCancel() {
+        Reset();
+        player.Resume();
     }
 }

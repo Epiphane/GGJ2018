@@ -11,6 +11,8 @@ public class BackendScript : MonoBehaviour {
     public const string baseUrl = "https://fierce-taiga-67645.herokuapp.com/";
     public const string deathEntryUrl = "deathEntry";
 
+    public const int SCALE = 4;
+
     // Use this for initialization
     void Start() {
         StartCoroutine(SpawnEntities());
@@ -19,7 +21,7 @@ public class BackendScript : MonoBehaviour {
     void SpawnEntity(EntityData entity) {
         PastPlayerTransmission newTransmission = Instantiate(entityToSpawn);
 
-        newTransmission.transform.position = new Vector3(entity.xPos, entity.yPos, 0);
+        newTransmission.transform.position = new Vector3(entity.xPos / SCALE, entity.yPos / SCALE, 0);
         newTransmission.transform.SetParent(entityTransformParent, false);
         newTransmission.transmissionData = entity;
     }
@@ -27,6 +29,7 @@ public class BackendScript : MonoBehaviour {
     [System.Serializable]
     public class EntityData {
         public string username;
+        public int scale;
         public float xPos, yPos;
         public string message;
     }
@@ -71,8 +74,9 @@ public class BackendScript : MonoBehaviour {
 
     public void ReportDeath(Vector2 position, string message, OnCompleteReport onComplete) {
         EntityData data = new EntityData();
-        data.xPos = position.x;
-        data.yPos = position.y;
+        data.scale = SCALE;
+        data.xPos = position.x * SCALE;
+        data.yPos = position.y * SCALE;
         data.message = message;
         data.username = "???";
 

@@ -23,9 +23,7 @@ public class PlayerMovementScript : MonoBehaviour {
 	    if (!audioSource) {
             audioSource = GetComponent<AudioSource>();
         }
-        volumeMixer.SetFloat("InGameVolume", 0);
-        audioSource.volume = 0;
-        droneSprite.color = new Color(1, 1, 1, 0);
+        Resume();
     }
 
     public void Stop() {
@@ -34,12 +32,19 @@ public class PlayerMovementScript : MonoBehaviour {
         this.enabled = false;
         volumeMixer.SetFloat("InGameVolume", -80);
     }
+
+    public void Resume() {
+        volumeMixer.SetFloat("InGameVolume", 0);
+        audioSource.volume = 0;
+        droneSprite.color = new Color(1, 1, 1, 0);
+        this.enabled = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
         Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 
-        GetComponent<Rigidbody2D>().velocity = velocity;
+        GetComponent<Rigidbody2D>().velocity = velocity * 0.5f;
         sprite.rotation = Quaternion.FromToRotation(Vector3.up, velocity);
 
         float MIN_TO_MOVE = 0.5f;
@@ -90,8 +95,8 @@ public class PlayerMovementScript : MonoBehaviour {
 
         Vector3 right = Quaternion.AngleAxis(90.0f, Vector3.forward) * playerDirection;
 
-        woh.transform.position = transform.position - playerDirection.normalized * 0.4f + right.normalized * Random.Range(-0.2f, 0.2f);
+        woh.transform.position = transform.position - playerDirection.normalized * 0.1f + right.normalized * Random.Range(-0.05f, 0.05f);
         woh.transform.rotation = Quaternion.FromToRotation(Vector3.up, playerDirection);
-        woh.transform.localScale = Vector3.one * 0.5f;
+        woh.transform.localScale = Vector3.one * 0.125f;
     }
 }
