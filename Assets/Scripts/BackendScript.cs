@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class BackendScript : MonoBehaviour {
 
-    public GameObject entityToSpawn;
+    public PastPlayerTransmission entityToSpawn;
     public Transform entityTransformParent;
 
     public const string baseUrl = "https://fierce-taiga-67645.herokuapp.com/";
@@ -17,10 +17,11 @@ public class BackendScript : MonoBehaviour {
     }
 
     void SpawnEntity(EntityData entity) {
-        GameObject e = GameObject.Instantiate(entityToSpawn);
+        PastPlayerTransmission newTransmission = Instantiate(entityToSpawn);
 
-        e.transform.position = new Vector3(entity.xPos, entity.yPos, 0);
-        e.transform.parent = entityTransformParent;
+        newTransmission.transform.position = new Vector3(entity.xPos, entity.yPos, 0);
+        newTransmission.transform.SetParent(entityTransformParent, false);
+        newTransmission.transmissionData = entity;
     }
 
     [System.Serializable]
