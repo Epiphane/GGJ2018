@@ -25,11 +25,9 @@ public class BackendScript : MonoBehaviour {
 
     [System.Serializable]
     public class EntityData {
-        public int id;
         public string username;
         public int xPos, yPos;
         public string message;
-        public string createdAt, updatedAt;
     }
 
     [System.Serializable]
@@ -39,9 +37,7 @@ public class BackendScript : MonoBehaviour {
 
     IEnumerator SpawnEntities() {
         UnityWebRequest getEntities = UnityWebRequest.Get(baseUrl + deathEntryUrl);
-        Debug.Log("Sending");
         yield return getEntities.SendWebRequest();
-        Debug.Log("Recv");
 
         if (getEntities.isNetworkError || getEntities.isHttpError) {
             Debug.Log(getEntities.error);
@@ -53,6 +49,18 @@ public class BackendScript : MonoBehaviour {
             foreach (EntityData e in entities) {
                 SpawnEntity(e);
             }
+        }
+    }
+
+    IEnumerator ReportDeath(EntityData entity) {
+        byte[] data = System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(entity));
+        UnityWebRequest www = UnityWebRequest.Put(baseUrl + deathEntryUrl, data);
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError) {
+            Debug.Log(www.error);
+        } else {
+            Debug.Log("Death Reported G_G");
         }
     }
 }
