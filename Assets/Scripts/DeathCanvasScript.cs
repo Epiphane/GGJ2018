@@ -23,7 +23,6 @@ public class DeathCanvasScript : MonoBehaviour {
         animationTime = 0;
         background.color = new Color(0, 0, 0, 0);
         toDrop.localPosition = new Vector3(0, 1250, 0);
-        
     }
 
     float EaseOutBounce(float t, float start, float height, float d) {
