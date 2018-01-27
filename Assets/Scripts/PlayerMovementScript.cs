@@ -10,10 +10,13 @@ public class PlayerMovementScript : MonoBehaviour {
     public GameObject wohPrefab;
     public int wohsPerLoop = 4;
 
+    public SpriteRenderer droneSprite;
     public Transform sprite;
 
     private bool moving = false;
     private float lastTime = 0.0f;
+
+    private float opacity;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +24,8 @@ public class PlayerMovementScript : MonoBehaviour {
             audioSource = GetComponent<AudioSource>();
         }
         volumeMixer.SetFloat("InGameVolume", 0);
+        audioSource.volume = 0;
+        droneSprite.color = new Color(1, 1, 1, 0);
     }
 
     public void Stop() {
@@ -44,9 +49,12 @@ public class PlayerMovementScript : MonoBehaviour {
         if (newMoving != moving) {
             if (newMoving) {
                 audioSource.Play();
+                opacity = 0;
             }
             else {
                 audioSource.Stop();
+                audioSource.volume = 0;
+                droneSprite.color = new Color(1, 1, 1, 0);
             }
             moving = newMoving;
         }
@@ -67,13 +75,23 @@ public class PlayerMovementScript : MonoBehaviour {
                 }
             }
             lastTime = newTime;
+
+            opacity += 2 * Time.deltaTime;
+            if (opacity > Mathf.PI * 2) {
+                opacity -= Mathf.PI * 2;
+            }
+            droneSprite.color = new Color(1, 1, 1, Mathf.Pow(audioSource.volume * (Mathf.Sin(opacity) + 1) / 2, 2));
         }
-	}
+
+    }
 
     public void Woh (Vector3 playerDirection) {
         GameObject woh = GameObject.Instantiate(wohPrefab);
 
-        woh.transform.position = transform.position - playerDirection.normalized * 0.4f;
+        Vector3 right = Quaternion.AngleAxis(90.0f, Vector3.forward) * playerDirection;
+
+        woh.transform.position = transform.position - playerDirection.normalized * 0.4f + right.normalized * Random.Range(-0.2f, 0.2f);
         woh.transform.rotation = Quaternion.FromToRotation(Vector3.up, playerDirection);
+        woh.transform.localScale = Vector3.one * 0.5f;
     }
 }
