@@ -51,7 +51,7 @@ public class PlayerMovementScript : MonoBehaviour {
             moving = newMoving;
         }
         if (moving) {
-            audioSource.volume = Mathf.Clamp((speed - MIN_TO_MOVE) / (1 - MIN_TO_MOVE), 0, 1);
+            audioSource.volume = Mathf.Clamp((speed - MIN_TO_MOVE) / (1 - MIN_TO_MOVE), 0, 1) / 2;
 
             float newTime = audioSource.time;
             if (newTime < lastTime) {
