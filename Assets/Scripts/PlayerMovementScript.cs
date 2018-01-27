@@ -21,7 +21,8 @@ public class PlayerMovementScript : MonoBehaviour {
 	void Update () {
         Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 
-        transform.position = transform.position += velocity * Time.deltaTime;
+        //transform.position = transform.position += velocity * Time.deltaTime;
+        GetComponent<Rigidbody2D>().velocity = velocity;
 
         float MIN_TO_MOVE = 0.5f;
         float speed = velocity.magnitude;
