@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
+    public DeathCanvasScript deathCanvas;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,7 +17,8 @@ public class PlayerScript : MonoBehaviour {
 	}
 
     public void Die (string reason) {
-        Debug.Log("Im Ded G_G");
-        Debug.Log(reason);
+        deathCanvas.ShowDeath(reason);
+
+        GetComponent<PlayerMovementScript>().Stop();
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovementScript : MonoBehaviour {
 
+    public AudioMixer volumeMixer;
     public AudioSource audioSource;
     public GameObject wohPrefab;
 
@@ -15,13 +17,20 @@ public class PlayerMovementScript : MonoBehaviour {
 	    if (!audioSource) {
             audioSource = GetComponent<AudioSource>();
         }
-	}
+        volumeMixer.SetFloat("InGameVolume", 0);
+    }
+
+    public void Stop() {
+        //audioSource.Stop();
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        this.enabled = false;
+        volumeMixer.SetFloat("InGameVolume", -80);
+    }
 	
 	// Update is called once per frame
 	void Update () {
         Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 
-        //transform.position = transform.position += velocity * Time.deltaTime;
         GetComponent<Rigidbody2D>().velocity = velocity;
 
         float MIN_TO_MOVE = 0.5f;
