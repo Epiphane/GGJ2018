@@ -2453,6 +2453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4468496141199516}
   - component: {fileID: 2569400267200746678}
+  - component: {fileID: 114897528998875392}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -7892,8 +7893,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437944534031652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4040679455179314}
   - {fileID: 4562287948953984}
@@ -14603,6 +14604,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &114897528998875392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437944534031652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559787487214c43ed9c030bdb9a966e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _areGridTilesVisible: 1
 --- !u!212 &212001150904006272
 SpriteRenderer:
   m_ObjectHideFlags: 1

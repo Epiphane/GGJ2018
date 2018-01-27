@@ -83,6 +83,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4553337266854420}
+  - component: {fileID: 114393595953105930}
   m_Layer: 0
   m_Name: BottomCenterTurn
   m_TagString: Untagged
@@ -234,6 +235,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.23599231}
   m_EdgeRadius: 0
+--- !u!114 &114393595953105930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1786047510716342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0911b39557ad4dcb922b997f126360f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gridSprite: {fileID: 1286341825514230}
 --- !u!212 &212458752858952394
 SpriteRenderer:
   m_ObjectHideFlags: 1
