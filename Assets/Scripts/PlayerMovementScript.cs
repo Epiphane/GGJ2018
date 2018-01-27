@@ -8,6 +8,7 @@ public class PlayerMovementScript : MonoBehaviour {
     public AudioMixer volumeMixer;
     public AudioSource audioSource;
     public GameObject wohPrefab;
+    public int wohsPerLoop = 4;
 
     private bool moving = false;
     private float lastTime = 0.0f;
@@ -49,7 +50,6 @@ public class PlayerMovementScript : MonoBehaviour {
         if (moving) {
             audioSource.volume = Mathf.Clamp((speed - MIN_TO_MOVE) / (1 - MIN_TO_MOVE), 0, 1);
 
-            int wohsPerLoop = 4;
             float newTime = audioSource.time;
             if (newTime < lastTime) {
                 // Looped!
