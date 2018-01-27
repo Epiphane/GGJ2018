@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButton("SendTransmission")) {
+		if (Input.GetButtonDown("SendTransmission")) {
             SendTransmission();
         }
 	}
@@ -28,11 +28,13 @@ public class PlayerScript : MonoBehaviour {
     public void SendTransmission() {
         sendTransmissionCanvas.player = this;
         sendTransmissionCanvas.ShowDeath(new Vector2(transform.position.x, transform.position.y), "");
+        this.enabled = false;
 
         GetComponent<PlayerMovementScript>().Stop();
     }
 
     public void Resume() {
+        this.enabled = true;
         GetComponent<PlayerMovementScript>().Resume();
     }
 }

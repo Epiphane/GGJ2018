@@ -61,7 +61,7 @@ public class DeathCanvasScript : MonoBehaviour {
             toDrop.localPosition = new Vector3(0, EaseOutBounce(animationTime - 1.5f, 1250, 1250, 2), 0);
         }
 
-        if (isInputting) {
+        if (message != null && isInputting) {
             message.ActivateInputField();
 
             if (message.text != "" && Input.GetKey(KeyCode.Return)) {
@@ -76,6 +76,10 @@ public class DeathCanvasScript : MonoBehaviour {
 
         if (deathReason != null)
             deathReason.text = reason;
+
+        if (message != null) {
+            animationTime = 10;
+        }
 
         gameObject.SetActive(true);
         isInputting = true;
