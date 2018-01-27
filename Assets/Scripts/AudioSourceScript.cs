@@ -8,10 +8,12 @@ public class AudioSourceScript : MonoBehaviour {
     public GameObject pingPrefab;
 
     public float repeatDelay = 2.0f;
-    public bool playOnAwake = true;
+    public bool isActive = false;
 
     public int numPings = 5;
     public float delayAddPerPing = 0.5f;
+
+    public GameObject player;
 
     private float cooldown = 0.0f;
 
@@ -23,13 +25,23 @@ public class AudioSourceScript : MonoBehaviour {
 
         audioSource.playOnAwake = false;
 
-        if (!playOnAwake) {
-            cooldown = repeatDelay;
-        }
-	}
+        cooldown = Random.Range(0, repeatDelay);
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        if (!isActive) {
+            Vector3 dist = player.transform.position - transform.position;
+
+            if (Mathf.Abs(dist.x) < 7.5f && Mathf.Abs(dist.y) < 5.0f) {
+                isActive = true;
+            }
+        }
+
+        if (!isActive)
+            return;
+
         cooldown -= Time.deltaTime;
         if (cooldown <= 0) {
             Ping();
