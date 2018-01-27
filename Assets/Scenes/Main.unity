@@ -137,7 +137,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 633152917}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &633152919
 Behaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +221,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 20b3e3ee20eca784589104871ac29ace, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.795
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -265,7 +265,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 977897450}
   - component: {fileID: 977897452}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,7 +355,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -390,7 +390,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -437,7 +437,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 977897449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.62, y: 2.63, z: -0.065439515}
+  m_LocalPosition: {x: 3.52, y: 2.24, z: -0.065439515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -458,8 +458,8 @@ MonoBehaviour:
   pingPrefab: {fileID: 1526614832812726, guid: 0cf1d874c2bef9142acf954700641f8a, type: 2}
   repeatDelay: 2
   playOnAwake: 1
-  numPings: 5
-  delayAddPerPing: 0.5
+  numPings: 10
+  delayAddPerPing: 0
 --- !u!1 &1971183101
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1971183102}
   - component: {fileID: 1971183103}
+  - component: {fileID: 1971183104}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -483,7 +484,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1971183101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.31525868, y: 0.03950546, z: -0.013671875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 867100837}
@@ -504,3 +505,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 867100836}
   wohPrefab: {fileID: 1626572366814868, guid: e5565622f887aa74b9eba50a19685a0e, type: 2}
+--- !u!81 &1971183104
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1971183101}
+  m_Enabled: 1
