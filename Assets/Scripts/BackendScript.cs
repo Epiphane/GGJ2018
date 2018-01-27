@@ -53,12 +53,17 @@ public class BackendScript : MonoBehaviour {
     }
 
     IEnumerator ReportDeath(EntityData entity) {
-        //byte[] data = System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(entity));
-        UnityWebRequest www = UnityWebRequest.Post(baseUrl + deathEntryUrl, JsonUtility.ToJson(entity));
+        byte[] data = System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(entity));
+        
+        UnityWebRequest www = UnityWebRequest.Put(baseUrl + deathEntryUrl, data);
+        www.SetRequestHeader("Content-Type", "application/json");
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError) {
+            Debug.Log(JsonUtility.ToJson(entity));
             Debug.Log(www.error);
+            Debug.Log(www.responseCode);
+            Debug.Log(www.downloadHandler.text);
         } else {
             Debug.Log("Death Reported G_G");
         }
