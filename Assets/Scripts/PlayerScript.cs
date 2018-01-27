@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 
     public void Die (string reason) {
-        deathCanvas.ShowDeath(reason);
+        deathCanvas.ShowDeath(new Vector2(transform.position.x, transform.position.y), reason);
 
         GetComponent<PlayerMovementScript>().Stop();
     }

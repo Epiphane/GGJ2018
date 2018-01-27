@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DeathCanvasScript : MonoBehaviour {
 
@@ -10,10 +11,15 @@ public class DeathCanvasScript : MonoBehaviour {
     public Image background;
     public Text deathReason;
     public Transform toDrop;
+    public InputField message;
+    public Button continueButton;
 
     public float animationTime = 0.0f;
 
-	void Start () {
+    private Vector2 deathPosition;
+    private bool isInputting = false;
+
+    void Start () {
         gameObject.SetActive(false);
 
         Reset ();
@@ -53,11 +59,32 @@ public class DeathCanvasScript : MonoBehaviour {
         if (animationTime > 1.0f) {
             toDrop.localPosition = new Vector3(0, EaseOutBounce(animationTime - 1.5f, 1250, 1250, 2), 0);
         }
+
+        if (isInputting) {
+            message.ActivateInputField();
+
+            if (message.text != "" && Input.GetKey(KeyCode.Return)) {
+                OnContinue();
+            }
+        }
+
     }
 
-    public void ShowDeath(string reason) {
+    public void ShowDeath(Vector2 deathPosition, string reason) {
+        this.deathPosition = deathPosition;
         deathReason.text = reason;
 
         gameObject.SetActive(true);
+        isInputting = true;
+    }
+
+    public void GoNext() {
+        SceneManager.LoadScene("Main");
+    }
+
+    public void OnContinue() {
+        backend.ReportDeath(deathPosition, message.text, GoNext);
+
+        isInputting = false;
     }
 }

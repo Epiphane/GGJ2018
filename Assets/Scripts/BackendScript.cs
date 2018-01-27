@@ -27,7 +27,7 @@ public class BackendScript : MonoBehaviour {
     [System.Serializable]
     public class EntityData {
         public string username;
-        public int xPos, yPos;
+        public float xPos, yPos;
         public string message;
     }
 
@@ -53,7 +53,9 @@ public class BackendScript : MonoBehaviour {
         }
     }
 
-    IEnumerator ReportDeath(EntityData entity) {
+    public delegate void OnCompleteReport();
+
+    IEnumerator _ReportDeath(EntityData entity, OnCompleteReport onComplete) {
         byte[] data = System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(entity));
         
         UnityWebRequest www = UnityWebRequest.Put(baseUrl + deathEntryUrl, data);
@@ -61,12 +63,19 @@ public class BackendScript : MonoBehaviour {
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError) {
-            Debug.Log(JsonUtility.ToJson(entity));
             Debug.Log(www.error);
-            Debug.Log(www.responseCode);
-            Debug.Log(www.downloadHandler.text);
         } else {
-            Debug.Log("Death Reported G_G");
+            onComplete();
         }
+    }
+
+    public void ReportDeath(Vector2 position, string message, OnCompleteReport onComplete) {
+        EntityData data = new EntityData();
+        data.xPos = position.x;
+        data.yPos = position.y;
+        data.message = message;
+        data.username = "???";
+
+        StartCoroutine(_ReportDeath(data, onComplete));
     }
 }
