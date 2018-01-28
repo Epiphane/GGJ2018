@@ -10,6 +10,8 @@ public class TerminalScript : MonoBehaviour {
     public Sprite[] turningOnSounds;
     public AudioSource audioSource;
 
+    public bool hasBeenActivatedBefore = false;
+
 	[Multiline]
 	public string textToSay;
 	public bool shownText = false;
@@ -34,12 +36,14 @@ public class TerminalScript : MonoBehaviour {
 			if (!shownText) {
 				shownText = true;
 				FindObjectOfType<OneCharAtATime> ().ShowTextIncrementally (textToSay, false);
-			}
+                hasBeenActivatedBefore = true;
+            }
 		}
         else if (!active && level > 0) {
             level -= Time.deltaTime * 2;
-            if (level < 0) {
+            if (level <= 0) {
                 level = 0;
+                shownText = false;
             }
 
             sprite.sprite = turningOnSprites[(int)Mathf.Floor(level)];
