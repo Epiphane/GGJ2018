@@ -70,12 +70,12 @@ public class BackendScript : MonoBehaviour {
             Debug.Log("OH NO NETWORK ERROR: " + www.error);
         }
 			
-		SceneManager.LoadScene("Spaceship");
+		SceneManager.LoadScene("Title");
     }
 
     public void ReportDeath(Vector2 position, string message) {
         if (message == "") {
-            SceneManager.LoadScene("Spaceship");
+			SceneManager.LoadScene("Title");
         }
 
         EntityData data = new EntityData();
