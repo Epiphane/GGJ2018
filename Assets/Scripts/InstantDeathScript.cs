@@ -24,5 +24,8 @@ public class InstantDeathScript : MonoBehaviour {
             if (deathSound)
                 deathSound.Play();
         }
+        if (other.gameObject.tag == "Debris") {
+            GameObject.Destroy(other.gameObject);
+        }
     }
 }

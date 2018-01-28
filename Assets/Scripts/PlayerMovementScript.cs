@@ -7,6 +7,7 @@ public class PlayerMovementScript : MonoBehaviour {
 
     public AudioMixer volumeMixer;
     public AudioSource audioSource;
+    public AudioSource brrSource;
     public GameObject wohPrefab;
     public int wohsPerLoop = 4;
 
@@ -44,11 +45,17 @@ public class PlayerMovementScript : MonoBehaviour {
 	void Update () {
         Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 
-        GetComponent<Rigidbody2D>().velocity = velocity * 0.5f;
+        brrSource.volume = 0.125f + 0.125f * Mathf.Min(Input.GetAxis("Horizontal") + Input.GetAxis("Vertical"), 1);
+
+        //GetComponent<Rigidbody2D>().velocity = velocity * 0.5f;
+        Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
+        rigidBody.AddForce(5 * (new Vector2(velocity.x, velocity.y)));
+        velocity = rigidBody.velocity;
         sprite.rotation = Quaternion.FromToRotation(Vector3.up, velocity);
 
         float MIN_TO_MOVE = 0.5f;
         float speed = velocity.magnitude;
+        droneSprite.color = new Color(1, 1, 1, brrSource.volume + speed); // Mathf.Pow(audioSource.volume * (Mathf.Sin(opacity) + 1) / 2, 2));
 
         bool newMoving = (speed > MIN_TO_MOVE);
         if (newMoving != moving) {
@@ -59,12 +66,13 @@ public class PlayerMovementScript : MonoBehaviour {
             else {
                 audioSource.Stop();
                 audioSource.volume = 0;
-                droneSprite.color = new Color(1, 1, 1, 0);
+                //droneSprite.color = new Color(1, 1, 1, 0);
             }
             moving = newMoving;
         }
         if (moving) {
-            audioSource.volume = Mathf.Clamp((speed - MIN_TO_MOVE) / (1 - MIN_TO_MOVE), 0, 1) / 2;
+            float spd = Mathf.Clamp((speed - MIN_TO_MOVE) / (1 - MIN_TO_MOVE), 0, 1);
+            audioSource.volume = 0;// speed / 2;
 
             float newTime = audioSource.time;
             if (newTime < lastTime) {
@@ -85,9 +93,7 @@ public class PlayerMovementScript : MonoBehaviour {
             if (opacity > Mathf.PI * 2) {
                 opacity -= Mathf.PI * 2;
             }
-            droneSprite.color = new Color(1, 1, 1, audioSource.volume * 2); // Mathf.Pow(audioSource.volume * (Mathf.Sin(opacity) + 1) / 2, 2));
         }
-
     }
 
     public void Woh (Vector3 playerDirection) {
