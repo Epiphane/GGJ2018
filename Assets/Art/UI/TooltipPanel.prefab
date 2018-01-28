@@ -156,6 +156,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachedObject: {fileID: 0}
   myWords: {fileID: 114743645906457968}
+  textAnimTicks: 0
+  textAnimInitialDelay: 30
+  textAnimLength: 100
+  garbledMessage: 
+  garbledTarget: 
+  message: 
 --- !u!114 &114596799034813844
 MonoBehaviour:
   m_ObjectHideFlags: 1
