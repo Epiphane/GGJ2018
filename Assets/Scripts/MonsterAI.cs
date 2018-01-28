@@ -9,7 +9,7 @@ public class MonsterAI : MonoBehaviour
     [SerializeField]
     private float _speed = 1.0f;
     [SerializeField]
-    private float _timeToDie = 5.0f;
+    private float _timeToDie = 15.0f;
 
     // Update is called once per frame
     void Update()

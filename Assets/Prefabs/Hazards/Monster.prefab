@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.75
-  _timeToDie: 5
+  _timeToDie: 15
 --- !u!114 &114299669653664686
 MonoBehaviour:
   m_ObjectHideFlags: 1
