@@ -47,6 +47,9 @@ public class DeathHandler : MonoBehaviour {
 	public GameObject buttonLayer;
 
 	public void ShowConfirmation(Vector2 pos) {
+		if (currState == AWAITING_INPUT)
+			return;
+		
 		SetBGVisible (true);
 			// set buttons to visible
 		currState = CONTEMPLATING_DEATH;
