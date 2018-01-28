@@ -3252,8 +3252,7 @@ MonoBehaviour:
     complete. Neptonium detected on planet surface.\r\n\r\nZZ TRITON. CAPTAINS BAY.
     18:10 P8732\r\n\r\nfjork: Course set for planet surface\r\neldab: Course reset.\r\neldab:
     System locked for 12 hours.\r\n\r\nZZ TRITON. CAPTAINS BAY. 6:10 P8733\r\n\r\nfjork:
-    Course set for planet surface.\r\n\r\nZZ TRITON. CAPTAINS BAY. 12:10 P8733\r\n\r\nConnection
-    lost to BRIDGE. System going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
+    Course set for planet surface."
   shownText: 0
 --- !u!212 &1257209909
 SpriteRenderer:
