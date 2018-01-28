@@ -11,7 +11,7 @@ public class MonsterSpawner : MonoBehaviour
     private GameObject _monsterPrefab;
 
     void Update () {
-        if (activateAfterThis.hasBeenActivatedBefore) {
+        if (activateAfterThis == null || activateAfterThis.hasBeenActivatedBefore) {
             canSpawn = true;
         }
     }
