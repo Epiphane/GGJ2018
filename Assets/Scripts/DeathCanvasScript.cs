@@ -6,14 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class DeathCanvasScript : MonoBehaviour {
 
-    public BackendScript backend;
-
     public Image background;
     public Text deathReason;
     public Transform toDrop;
     public InputField message;
     public Button continueButton;
-    public PlayerScript player;
 
     public float animationTime = 0.0f;
 
@@ -91,7 +88,7 @@ public class DeathCanvasScript : MonoBehaviour {
 
     public void OnContinue() {
         if (message != null) {
-            backend.ReportDeath(deathPosition, message.text, GoNext);
+//			GameObject.FindObjectOfType<BackendScript>().ReportDeath(deathPosition, message.text, GoNext);
 
             isInputting = false;
         }
@@ -102,6 +99,6 @@ public class DeathCanvasScript : MonoBehaviour {
 
     public void OnCancel() {
         Reset();
-        player.Resume();
+		GameObject.FindObjectOfType<PlayerScript>().Resume();
     }
 }

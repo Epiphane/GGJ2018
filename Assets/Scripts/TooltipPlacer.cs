@@ -17,7 +17,7 @@ public class TooltipPlacer : MonoBehaviour
 	// How many ticks should it take for text to garble in
 	private int textAnimLength = 20;
 	// how many frames per anim tick
-	public int textAnimTickFrames = 3;
+	public int textAnimTickFrames = 1;
 	// frames till next tick
 	public int frames = 0;
 
@@ -62,7 +62,7 @@ public class TooltipPlacer : MonoBehaviour
 				replacing_char = garbledTarget[curr_char_index];
 			} else {
 				// random
-				replacing_char = (char)('A' + Random.Range (0,52));
+				replacing_char = (char)('A' + Random.Range (0,61));
 			}
 
 			int after_char_index = curr_char_index + 1;
@@ -88,7 +88,7 @@ public class TooltipPlacer : MonoBehaviour
 	public void OpenTooltip()
 	{
 		if (GetComponent<Animator>().GetBool("tooltipOpen") == false)
-			StartAnimatingGarble ("Incoming message...", message, 80);
+			StartAnimatingGarble ("Incoming transmission...", message, 80);
 		
 		GetComponent<Animator> ().SetBool ("tooltipOpen", true);
 	}

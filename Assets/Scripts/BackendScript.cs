@@ -58,7 +58,7 @@ public class BackendScript : MonoBehaviour {
 
     public delegate void OnCompleteReport();
 
-    IEnumerator _ReportDeath(EntityData entity, OnCompleteReport onComplete) {
+    IEnumerator _ReportDeath(EntityData entity) {
         byte[] data = System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(entity));
         
         UnityWebRequest www = UnityWebRequest.Put(baseUrl + deathEntryUrl, data);
@@ -66,13 +66,11 @@ public class BackendScript : MonoBehaviour {
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError) {
-            Debug.Log(www.error);
-        } else {
-            onComplete();
+            Debug.Log("OH NO NETWORK ERROR: " + www.error);
         }
     }
 
-    public void ReportDeath(Vector2 position, string message, OnCompleteReport onComplete) {
+    public void ReportDeath(Vector2 position, string message) {
         EntityData data = new EntityData();
         data.scale = SCALE;
         data.xPos = position.x * SCALE;
@@ -80,6 +78,8 @@ public class BackendScript : MonoBehaviour {
         data.message = message;
         data.username = "???";
 
-        StartCoroutine(_ReportDeath(data, onComplete));
+        StartCoroutine(_ReportDeath(data));
     }
 }
+
+

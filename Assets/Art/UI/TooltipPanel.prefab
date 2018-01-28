@@ -158,7 +158,8 @@ MonoBehaviour:
   myWords: {fileID: 114743645906457968}
   textAnimTicks: 0
   textAnimInitialDelay: 30
-  textAnimLength: 100
+  textAnimTickFrames: 0
+  frames: 0
   garbledMessage: 
   garbledTarget: 
   message: 
@@ -252,7 +253,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: incoming transmission...
 --- !u!222 &222217064539896468
