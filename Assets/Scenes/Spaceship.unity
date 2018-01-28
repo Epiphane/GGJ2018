@@ -2905,6 +2905,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 426173434}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\n\r\nZZ TRITON. MEDICAL BAY. 18:15 P8732\r\n\r\nFirst
     aid kit checked out for crew member eldab.\r\n\r\nZZ TRITON. MEDICAL BAY. 9:45
     P8733\r\n\r\nOxygen suit checked out for crew member fjork.\r\nFirst aid kit checked
@@ -3247,6 +3248,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 736039078}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. CAPTAINS BAY. 18:00 P8732\r\n\r\nScan
     complete. Neptonium detected on planet surface.\r\n\r\nZZ TRITON. CAPTAINS BAY.
     18:10 P8732\r\n\r\nfjork: Course set for planet surface\r\neldab: Course reset.\r\neldab:
@@ -3715,8 +3717,8 @@ Tilemap:
   m_Tiles:
   - first: {x: 1, y: -3, z: 0}
     second:
-      m_TileIndex: 29
-      m_TileSpriteIndex: 29
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 6
       m_ObjectToInstantiate: {fileID: 0}
@@ -6534,8 +6536,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 16b37a89aa222dd4a8c237379f58703a, type: 2}
   - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 2ce2261361346c24a8c280cd4b636521, type: 2}
   - m_RefCount: 6
@@ -6572,7 +6574,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 7e2c2a9050a50824a8eb82cc5e7edd6e, type: 2}
   - m_RefCount: 109
     m_Data: {fileID: 11400000, guid: 9f5d0e31987b04a4d9c3bd3c2b9452a3, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 0ba3d0869a2386141a3bbbf94045d6e4, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -6595,8 +6597,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300052, guid: e22a3abdc44d54945870908588cd8049, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: 21300006, guid: e1120b4c7a0c51a4caaf977b20979dcd, type: 3}
   - m_RefCount: 6
@@ -6633,7 +6635,7 @@ Tilemap:
     m_Data: {fileID: 21300078, guid: e1120b4c7a0c51a4caaf977b20979dcd, type: 3}
   - m_RefCount: 109
     m_Data: {fileID: 21300004, guid: e1120b4c7a0c51a4caaf977b20979dcd, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 3
     m_Data: {fileID: 21300212, guid: e1120b4c7a0c51a4caaf977b20979dcd, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 311
@@ -7330,6 +7332,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 266217165}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. BRIDGE. 12:00 P8733\r\n\r\nStatus Report\r\nSTORAGE:
     Damaged.\r\nATMOS:   Inactive.\r\nMESS:    Inactive.\r\nBAY:     Inactive.\r\nMEDICAL:
     Inactive.\r\n\r\nNo crew activity detected, system going to sleep.\r\n<PRESS [ENTER]
@@ -7753,6 +7756,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1066513880}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. STORAGE BAY. 10:00 P8733\r\n\r\nHull breach
     detected. Actvivating backup bay doors.\r\nERROR: Unknown Exception. Please contact
     your system administrator.\r\n\r\nZZ TRITON. STORAGE BAY. 10:20 P8733\r\n\r\nOxygen
@@ -8107,6 +8111,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1871000354}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. MESS HALL. 6:00 P8733\r\n\r\nfjork: Good
     morning, captain!\r\nfjork: Early breakfast cannot be enabled without administrator
     permission.\r\nfjork: Early breakfast enabled.\r\n\r\nZZ TRITON. MESS HALL. 10:30
@@ -8528,6 +8533,79 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1888577571}
+--- !u!1 &1904115530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1904115531}
+  - component: {fileID: 1904115533}
+  - component: {fileID: 1904115532}
+  m_Layer: 0
+  m_Name: Launch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1904115531
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904115530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2017323436}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1904115532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904115530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fa636ce6ac7e844b0dba4fa7f30635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terminals:
+  - {fileID: 1446274685}
+  - {fileID: 1640819229}
+  - {fileID: 1947931177}
+  - {fileID: 1784428510}
+  - {fileID: 1257209908}
+  - {fileID: 1095918036}
+--- !u!61 &1904115533
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904115530}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1232546, y: 0.00000047683716}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2465092, y: 1.3052015}
+  m_EdgeRadius: 0
 --- !u!1 &1929897044
 GameObject:
   m_ObjectHideFlags: 0
@@ -13944,6 +14022,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1953660256}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. ATMOSPHERE. 10:20 P8733\r\n\r\nWarning
     received from STORAGE: Oxygen below 10%.\r\n\r\nZZ TRITON. ATMOSPHERE. 10:25 P8733\r\n\r\neldab:
     Login failed. This incident will be reported.\r\neldab: Login failed. This incident
@@ -14541,6 +14620,7 @@ Transform:
   - {fileID: 1784428508}
   - {fileID: 1257209906}
   - {fileID: 1095918034}
+  - {fileID: 1904115531}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
