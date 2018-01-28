@@ -14,8 +14,8 @@ public class DeathCanvasScript : MonoBehaviour {
 
     public float animationTime = 0.0f;
 
-    private Vector2 deathPosition;
-    private bool isInputting = false;
+    //private Vector2 deathPosition;
+    //private bool isInputting = false;
 
     void Start () {
         Reset ();
@@ -68,7 +68,7 @@ public class DeathCanvasScript : MonoBehaviour {
     }
 
     public void ShowDeath(Vector2 deathPosition, string reason) {
-        this.deathPosition = deathPosition;
+        //this.deathPosition = deathPosition;
 
         if (deathReason != null)
             deathReason.text = reason;
@@ -78,18 +78,18 @@ public class DeathCanvasScript : MonoBehaviour {
         }
 
         gameObject.SetActive(true);
-        isInputting = true;
+        //isInputting = true;
     }
 
     public void GoNext() {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Spaceship");
     }
 
     public void OnContinue() {
         if (message != null) {
 //			GameObject.FindObjectOfType<BackendScript>().ReportDeath(deathPosition, message.text, GoNext);
 
-            isInputting = false;
+            //isInputting = false;
         }
         else {
             GoNext();

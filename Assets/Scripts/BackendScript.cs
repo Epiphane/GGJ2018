@@ -74,6 +74,10 @@ public class BackendScript : MonoBehaviour {
     }
 
     public void ReportDeath(Vector2 position, string message) {
+        if (message == "") {
+            return;
+        }
+
         EntityData data = new EntityData();
         data.scale = SCALE;
         data.xPos = position.x * SCALE;
