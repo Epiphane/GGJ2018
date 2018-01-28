@@ -40,7 +40,7 @@ public class TextInputBlinker : MonoBehaviour {
 		TextGenerator textGen = new TextGenerator();
 		TextGenerationSettings generationSettings = inputText.GetGenerationSettings(inputText.rectTransform.rect.size); 
 		float width = textGen.GetPreferredWidth(newStuff, generationSettings);
-		float height = textGen.GetPreferredHeight(newStuff, generationSettings);
+		//float height = textGen.GetPreferredHeight(newStuff, generationSettings);
 
 		RectTransform rectTransform = (RectTransform)transform;
 		Vector2 pos = rectTransform.anchoredPosition;

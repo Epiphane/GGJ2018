@@ -72,7 +72,7 @@ public class PlayerMovementScript : MonoBehaviour {
             moving = newMoving;
         }
         if (moving) {
-            float spd = Mathf.Clamp((speed - MIN_TO_MOVE) / (1 - MIN_TO_MOVE), 0, 1);
+            //float spd = Mathf.Clamp((speed - MIN_TO_MOVE) / (1 - MIN_TO_MOVE), 0, 1);
             audioSource.volume = 0;// speed / 2;
 
             float newTime = audioSource.time;
