@@ -9,7 +9,9 @@ public class PastPlayerTransmission : MonoBehaviour
     public GameObject tooltipPrefab;
     public GameObject myTooltip;
 
-    public BackendScript.EntityData transmissionData;
+	public BackendScript.EntityData transmissionData;
+
+	public float distanceToPlayer;
 
     void Start()
     {
@@ -19,15 +21,21 @@ public class PastPlayerTransmission : MonoBehaviour
 
         myTooltip.GetComponent<TooltipPlacer>().attachedObject = this.gameObject;
 
-        myTooltip.GetComponent<TooltipPlacer>().SetText(transmissionData.username + " says: " + transmissionData.message);
+		myTooltip.GetComponent<TooltipPlacer>().SetText(transmissionData.message);
     }
 
 
 
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+		// Get distance to player. If close enough, animate opening
+		distanceToPlayer = Vector2.Distance(FindObjectOfType<PlayerScript>().transform.position, transform.position);
 
+		if (distanceToPlayer < 1.18f) {
+			myTooltip.GetComponent<TooltipPlacer> ().OpenTooltip ();
+		} else {
+			myTooltip.GetComponent<TooltipPlacer> ().CloseTooltip ();
+		}
     }
 }

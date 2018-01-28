@@ -10,14 +10,21 @@ public class TooltipPlacer : MonoBehaviour
 
     public Text myWords;
 
+	// How many ticks has it been since we started the text garble animation
+	public int textAnimTicks;
+
+	// Start/finish goals of the text garbling
+	public string garbleStart;
+	public string garbleEnd;
+
     // Use this for initialization
     void Start()
     {
 
     }
 
-    // Update is called once per frame
-    void Update()
+    // Late update, since apparently changing the rect size during animation messes with the position of my precious rectangles
+    void LateUpdate()
     {
         RectTransform my_transform = (RectTransform)transform;
         my_transform.position = Camera.main.WorldToScreenPoint(attachedObject.transform.position);
@@ -27,4 +34,16 @@ public class TooltipPlacer : MonoBehaviour
     {
         myWords.text = words;
     }
+
+	public void OpenTooltip()
+	{
+		GetComponent<Animator> ().SetBool ("tooltipOpen", true);
+
+
+	}
+
+	public void CloseTooltip()
+	{
+		GetComponent<Animator> ().SetBool ("tooltipOpen", false);
+	}
 }
