@@ -7331,8 +7331,9 @@ MonoBehaviour:
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 266217165}
   textToSay: "INITIALIZING...\r\nZZ TRITON. BRIDGE. 12:00 P8733\r\n\r\nStatus Report\r\nSTORAGE:
-    Damaged.\r\nATMOS:   Inactive.\r\nMESS:    Inactive.\r\nBAY:     Inactive.\r\n\r\nNo
-    crew activity detected, system going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
+    Damaged.\r\nATMOS:   Inactive.\r\nMESS:    Inactive.\r\nBAY:     Inactive.\r\nMEDICAL:
+    Inactive.\r\n\r\nNo crew activity detected, system going to sleep.\r\n<PRESS [ENTER]
+    TO CONTINUE>"
   shownText: 0
 --- !u!61 &1446274687
 BoxCollider2D:
