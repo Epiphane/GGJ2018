@@ -2830,7 +2830,7 @@ GameObject:
   - component: {fileID: 1095918036}
   - component: {fileID: 1095918035}
   m_Layer: 8
-  m_Name: Terminal 5
+  m_Name: Medical Bay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2850,7 +2850,7 @@ Transform:
   - {fileID: 470620671}
   - {fileID: 426173433}
   m_Father: {fileID: 2017323436}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1095918035
 BoxCollider2D:
@@ -2905,34 +2905,11 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 426173434}
-  textToSay: 'INITIALIZING...
-
-    ZZ TRITON. ATMOSPHERE. 10.20 P8733
-
-
-    Warning received from STORAGE: Oxygen below 10%.
-
-
-    ZZ TRITON. ATMOSPHERE. 10:25 P8733
-
-
-    eldab: Login failed. This incident will be reported.
-
-    eldab: Login failed. This incident will be reported.
-
-    eldab: Permission to disengage emergency vehicle denied.
-
-    eldab: Error closing captain bay doors.
-
-    eldab: Connection closed due to timeout.
-
-
-    ZZ TRITON. ATMOSPHERE. 12:10 P8733
-
-
-    Connection lost to BRIDGE. System going to sleep.
-
-    <PRESS [ENTER] TO CONTINUE>'
+  textToSay: "INITIALIZING...\r\n\r\nZZ TRITON. MEDICAL BAY. 18:15 P8732\r\n\r\nFirst
+    aid kit checked out for crew member eldab.\r\n\r\nZZ TRITON. MEDICAL BAY. 9:45
+    P8733\r\n\r\nOxygen suit checked out for crew member fjork.\r\nFirst aid kit checked
+    out for crew member fjork.\r\n\r\nZZ TRITON. MEDICAL BAY. 12:10 P8733\r\n\r\nConnection
+    lost to BRIDGE. System going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
   shownText: 0
 --- !u!212 &1095918037
 SpriteRenderer:
@@ -3196,7 +3173,7 @@ GameObject:
   - component: {fileID: 1257209908}
   - component: {fileID: 1257209907}
   m_Layer: 8
-  m_Name: Terminal 6
+  m_Name: Captains Bay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3216,7 +3193,7 @@ Transform:
   - {fileID: 1050111790}
   - {fileID: 736039077}
   m_Father: {fileID: 2017323436}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1257209907
 BoxCollider2D:
@@ -3271,34 +3248,12 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 736039078}
-  textToSay: 'INITIALIZING...
-
-    ZZ TRITON. ATMOSPHERE. 10.20 P8733
-
-
-    Warning received from STORAGE: Oxygen below 10%.
-
-
-    ZZ TRITON. ATMOSPHERE. 10:25 P8733
-
-
-    eldab: Login failed. This incident will be reported.
-
-    eldab: Login failed. This incident will be reported.
-
-    eldab: Permission to disengage emergency vehicle denied.
-
-    eldab: Error closing captain bay doors.
-
-    eldab: Connection closed due to timeout.
-
-
-    ZZ TRITON. ATMOSPHERE. 12:10 P8733
-
-
-    Connection lost to BRIDGE. System going to sleep.
-
-    <PRESS [ENTER] TO CONTINUE>'
+  textToSay: "INITIALIZING...\r\nZZ TRITON. CAPTAINS BAY. 18:00 P8732\r\n\r\nScan
+    complete. Neptonium detected on planet surface.\r\n\r\nZZ TRITON. CAPTAINS BAY.
+    18:10 P8732\r\n\r\nfjork: Course set for planet surface\r\neldab: Course reset.\r\neldab:
+    System locked for 12 hours.\r\n\r\nZZ TRITON. CAPTAINS BAY. 6:10 P8733\r\n\r\nfjork:
+    Course set for planet surface.\r\n\r\nZZ TRITON. CAPTAINS BAY. 12:10 P8733\r\n\r\nConnection
+    lost to BRIDGE. System going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
   shownText: 0
 --- !u!212 &1257209909
 SpriteRenderer:
@@ -5672,7 +5627,7 @@ GameObject:
   - component: {fileID: 1446274685}
   - component: {fileID: 1446274687}
   m_Layer: 8
-  m_Name: Terminal 1
+  m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5766,21 +5721,9 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 266217165}
-  textToSay: 'INITIALIZING...
-
-    ZZ TRITON. BRIDGE. 12.00 P8733
-
-
-    Status Report
-
-    STORAGE: Damaged.
-
-    ATMOS: Inactive.
-
-
-    No crew activity detected, system going to sleep.
-
-    <PRESS [ENTER] TO CONTINUE>'
+  textToSay: "INITIALIZING...\r\nZZ TRITON. BRIDGE. 12:00 P8733\r\n\r\nStatus Report\r\nSTORAGE:
+    Damaged.\r\nATMOS:   Inactive.\r\nMESS:    Inactive.\r\nBAY:     Inactive.\r\n\r\nNo
+    crew activity detected, system going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
   shownText: 0
 --- !u!61 &1446274687
 BoxCollider2D:
@@ -6125,7 +6068,7 @@ GameObject:
   - component: {fileID: 1640819229}
   - component: {fileID: 1640819228}
   m_Layer: 8
-  m_Name: Terminal 2
+  m_Name: Storage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6200,28 +6143,12 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1066513880}
-  textToSay: 'INITIALIZING...
-
-    ZZ TRITON. STORAGE BAY. 10.00 P8733
-
-
-    Hull breach detected. Actvivating backup bay doors.
-
-    ERROR: Unknown Exception. Please contact your system administrator.
-
-
-    ZZ TRITON. STORAGE BAY. 10.20 P8733
-
-
-    Oxygen levels below 10%. Paging ATMOS warning system
-
-
-    ZZ TRITON. STORAGE BAY. 12:10 P8733
-
-
-    Connection lost to BRIDGE. System going to sleep.
-
-    <PRESS [ENTER] TO CONTINUE>'
+  textToSay: "INITIALIZING...\r\nZZ TRITON. STORAGE BAY. 10:00 P8733\r\n\r\nHull breach
+    detected. Actvivating backup bay doors.\r\nERROR: Unknown Exception. Please contact
+    your system administrator.\r\n\r\nZZ TRITON. STORAGE BAY. 10:20 P8733\r\n\r\nOxygen
+    levels below 10%. Paging ATMOS warning system\r\n\r\nZZ TRITON. STORAGE BAY. 12:10
+    P8733\r\n\r\nConnection lost to BRIDGE. System going to sleep.\r\n<PRESS [ENTER]
+    TO CONTINUE>"
   shownText: 0
 --- !u!212 &1640819230
 SpriteRenderer:
@@ -6495,7 +6422,7 @@ GameObject:
   - component: {fileID: 1784428510}
   - component: {fileID: 1784428509}
   m_Layer: 8
-  m_Name: Terminal 4
+  m_Name: Mess Hall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6570,34 +6497,13 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1871000354}
-  textToSay: 'INITIALIZING...
-
-    ZZ TRITON. ATMOSPHERE. 10.20 P8733
-
-
-    Warning received from STORAGE: Oxygen below 10%.
-
-
-    ZZ TRITON. ATMOSPHERE. 10:25 P8733
-
-
-    eldab: Login failed. This incident will be reported.
-
-    eldab: Login failed. This incident will be reported.
-
-    eldab: Permission to disengage emergency vehicle denied.
-
-    eldab: Error closing captain bay doors.
-
-    eldab: Connection closed due to timeout.
-
-
-    ZZ TRITON. ATMOSPHERE. 12:10 P8733
-
-
-    Connection lost to BRIDGE. System going to sleep.
-
-    <PRESS [ENTER] TO CONTINUE>'
+  textToSay: "INITIALIZING...\r\nZZ TRITON. MESS HALL. 6:00 P8733\r\n\r\nfjork: Good
+    morning, captain!\r\nfjork: Early breakfast cannot be enabled without administrator
+    permission.\r\nfjork: Early breakfast enabled.\r\n\r\nZZ TRITON. MESS HALL. 10:30
+    P8733\r\n\r\neldab: Login failed. This incident will be reported.\r\neldab: Mess
+    hall doors cannot be closed during lounge hours.\r\neldab: Connection closed due
+    to timeout.\r\n\r\nZZ TRITON. MESS HALL. 12:10 P8733\r\n\r\nConnection lost to
+    BRIDGE. System going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
   shownText: 0
 --- !u!212 &1784428511
 SpriteRenderer:
@@ -9834,7 +9740,7 @@ GameObject:
   - component: {fileID: 1947931177}
   - component: {fileID: 1947931176}
   m_Layer: 8
-  m_Name: Terminal 3
+  m_Name: Atmos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9909,34 +9815,12 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1953660256}
-  textToSay: 'INITIALIZING...
-
-    ZZ TRITON. ATMOSPHERE. 10.20 P8733
-
-
-    Warning received from STORAGE: Oxygen below 10%.
-
-
-    ZZ TRITON. ATMOSPHERE. 10:25 P8733
-
-
-    eldab: Login failed. This incident will be reported.
-
-    eldab: Login failed. This incident will be reported.
-
-    eldab: Permission to disengage emergency vehicle denied.
-
-    eldab: Error closing captain bay doors.
-
-    eldab: Connection closed due to timeout.
-
-
-    ZZ TRITON. ATMOSPHERE. 12:10 P8733
-
-
-    Connection lost to BRIDGE. System going to sleep.
-
-    <PRESS [ENTER] TO CONTINUE>'
+  textToSay: "INITIALIZING...\r\nZZ TRITON. ATMOSPHERE. 10:20 P8733\r\n\r\nWarning
+    received from STORAGE: Oxygen below 10%.\r\n\r\nZZ TRITON. ATMOSPHERE. 10:25 P8733\r\n\r\neldab:
+    Login failed. This incident will be reported.\r\neldab: Login failed. This incident
+    will be reported.\r\neldab: Error closing emergency doors.\r\neldab: Connection
+    closed due to timeout.\r\n\r\nZZ TRITON. ATMOSPHERE. 12:10 P8733\r\n\r\nConnection
+    lost to BRIDGE. System going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
   shownText: 0
 --- !u!212 &1947931178
 SpriteRenderer:
@@ -10526,8 +10410,8 @@ Transform:
   - {fileID: 1640819227}
   - {fileID: 1947931175}
   - {fileID: 1784428508}
-  - {fileID: 1095918034}
   - {fileID: 1257209906}
+  - {fileID: 1095918034}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
