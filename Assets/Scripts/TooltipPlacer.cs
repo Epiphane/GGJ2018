@@ -17,7 +17,7 @@ public class TooltipPlacer : MonoBehaviour
 	// How many ticks should it take for text to garble in
 	private int textAnimLength = 20;
 	// how many frames per anim tick
-	public int textAnimTickFrames = 1;
+	public int textAnimTickFrames = 0;
 	// frames till next tick
 	public int frames = 0;
 
@@ -44,7 +44,7 @@ public class TooltipPlacer : MonoBehaviour
 		}
 
 		// Garblin' garblin' garblin'
-		if (frames-- < 0  && garbledTarget.Length > 0) {
+		if (--frames < 0  && garbledTarget.Length > 0) {
 			// It's garblin' time
 			frames = textAnimTickFrames;
 

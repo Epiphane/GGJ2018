@@ -58,13 +58,12 @@ public class DeathCanvasScript : MonoBehaviour {
             toDrop.localPosition = new Vector3(0, EaseOutBounce(animationTime - 1.5f, 1250, 1250, 2), 0);
         }
 
-        if (message != null && isInputting) {
-            message.ActivateInputField();
-
-            if (message.text != "" && Input.GetKey(KeyCode.Return)) {
-                OnContinue();
-            }
-        }
+//        if (message != null && isInputting) {
+//
+//            if (message.text != "" && Input.GetKey(KeyCode.Return)) {
+//                OnContinue();
+//            }
+//        }
 
     }
 

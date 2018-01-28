@@ -34,14 +34,14 @@ public class DeathHandler : MonoBehaviour {
 	}
 
 	public void SubmitDeathMessage(string message) {
-		if (currState == AWAITING_INPUT) {
+//		if (currState == AWAITING_INPUT) {
 			currState = IN_GAME;
 			transform.Find ("InputField").gameObject.SetActive (false);
 			GameObject.FindObjectOfType<BackendScript>().ReportDeath(deathPosition, message);
 
 			SetBGVisible(false);
 			transform.Find ("DeathMessage").GetComponent<OneCharAtATime> ().DoneForNow ();
-		}
+//		}
 	}
 
 	public GameObject buttonLayer;
@@ -58,6 +58,8 @@ public class DeathHandler : MonoBehaviour {
 		currState = IN_GAME;
 		SetBGVisible (false);
 		buttonLayer.SetActive (false);
+
+		FindObjectOfType < PlayerScript> ().Resume ();
 	}
 
 	public void EasyWayOut()  {

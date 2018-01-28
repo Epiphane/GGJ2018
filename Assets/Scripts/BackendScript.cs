@@ -70,7 +70,7 @@ public class BackendScript : MonoBehaviour {
             Debug.Log("OH NO NETWORK ERROR: " + www.error);
         }
 			
-		SceneManager.LoadScene("Main");
+		SceneManager.LoadScene("Spaceship");
     }
 
     public void ReportDeath(Vector2 position, string message) {

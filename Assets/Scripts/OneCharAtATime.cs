@@ -17,7 +17,7 @@ public class OneCharAtATime : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.anyKeyDown) {
+		if (Input.anyKeyDown && finalMessage.Length > 0) {
 			revealedMessage = finalMessage;
 			GetComponent<Text> ().text = revealedMessage;
 			FinishedText ();
