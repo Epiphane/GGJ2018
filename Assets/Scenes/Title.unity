@@ -2409,13 +2409,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 756404562}
-  m_LocalRotation: {x: -0, y: -0, z: 0.12180192, w: 0.9925544}
-  m_LocalPosition: {x: -0.08, y: 0.008, z: 0}
-  m_LocalScale: {x: 0.02057405, y: 0.018417653, z: 0.0009074558}
+  m_LocalRotation: {x: -0, y: -0, z: 0.019194212, w: 0.9998158}
+  m_LocalPosition: {x: -0.088, y: 0.005, z: 0}
+  m_LocalScale: {x: 0.02427086, y: 0.017878436, z: 0.00088088814}
   m_Children: []
   m_Father: {fileID: 649002971}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13.992001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.2}
 --- !u!114 &756404564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3214,6 +3214,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 426173434}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\n\r\nZZ TRITON. MEDICAL BAY. 18:15 P8732\r\n\r\nFirst
     aid kit checked out for crew member eldab.\r\n\r\nZZ TRITON. MEDICAL BAY. 9:45
     P8733\r\n\r\nOxygen suit checked out for crew member fjork.\r\nFirst aid kit checked
@@ -3556,6 +3557,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 736039078}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. CAPTAINS BAY. 18:00 P8732\r\n\r\nScan
     complete. Neptonium detected on planet surface.\r\n\r\nZZ TRITON. CAPTAINS BAY.
     18:10 P8732\r\n\r\nfjork: Course set for planet surface\r\neldab: Course reset.\r\neldab:
@@ -7467,8 +7469,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1446274682}
   m_LocalRotation: {x: -0, y: -0, z: 0.21189293, w: 0.9772929}
-  m_LocalPosition: {x: 1.24, y: -0.44, z: -1.02}
-  m_LocalScale: {x: 0.49942923, y: 0.4858582, z: 0.4858582}
+  m_LocalPosition: {x: 1.32, y: -0.62, z: -1.03}
+  m_LocalScale: {x: 0.5857629, y: 0.56984586, z: 0.56984586}
   m_Children:
   - {fileID: 1681247289}
   - {fileID: 266217164}
@@ -7547,6 +7549,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 266217165}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. BRIDGE. 12:00 P8733\r\n\r\nStatus Report\r\nSTORAGE:
     Damaged.\r\nATMOS:   Inactive.\r\nMESS:    Inactive.\r\nBAY:     Inactive.\r\nMEDICAL:
     Inactive.\r\n\r\nNo crew activity detected, system going to sleep.\r\n<PRESS [ENTER]
@@ -7970,6 +7973,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1066513880}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. STORAGE BAY. 10:00 P8733\r\n\r\nHull breach
     detected. Actvivating backup bay doors.\r\nERROR: Unknown Exception. Please contact
     your system administrator.\r\n\r\nZZ TRITON. STORAGE BAY. 10:20 P8733\r\n\r\nOxygen
@@ -8324,6 +8328,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1871000354}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. MESS HALL. 6:00 P8733\r\n\r\nfjork: Good
     morning, captain!\r\nfjork: Early breakfast cannot be enabled without administrator
     permission.\r\nfjork: Early breakfast enabled.\r\n\r\nZZ TRITON. MESS HALL. 10:30
@@ -14161,6 +14166,7 @@ MonoBehaviour:
   - {fileID: 21300008, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   - {fileID: 21300010, guid: ae31a3cde875aa24ba64448db5d3bc10, type: 3}
   audioSource: {fileID: 1953660256}
+  hasBeenActivatedBefore: 0
   textToSay: "INITIALIZING...\r\nZZ TRITON. ATMOSPHERE. 10:20 P8733\r\n\r\nWarning
     received from STORAGE: Oxygen below 10%.\r\n\r\nZZ TRITON. ATMOSPHERE. 10:25 P8733\r\n\r\neldab:
     Login failed. This incident will be reported.\r\neldab: Login failed. This incident
