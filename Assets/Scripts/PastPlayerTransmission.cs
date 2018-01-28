@@ -13,6 +13,8 @@ public class PastPlayerTransmission : MonoBehaviour
 
 	public float distanceToPlayer;
 
+	private PlayerScript player;
+
     void Start()
     {
         // Instantiate my tooltip
@@ -24,13 +26,16 @@ public class PastPlayerTransmission : MonoBehaviour
 		myTooltip.GetComponent<TooltipPlacer>().SetText(transmissionData.message);
     }
 
-
+	void Awake()
+	{
+		player = FindObjectOfType<PlayerScript> ();
+	}
 
 
     // Update is called once per frame
     void Update() {
 		// Get distance to player. If close enough, animate opening
-		distanceToPlayer = Vector2.Distance(FindObjectOfType<PlayerScript>().transform.position, transform.position);
+		distanceToPlayer = Vector2.Distance(player.transform.position, transform.position);
 
 		if (distanceToPlayer < 1.18f) {
 			myTooltip.GetComponent<TooltipPlacer> ().OpenTooltip ();
