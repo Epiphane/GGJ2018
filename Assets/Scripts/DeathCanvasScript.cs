@@ -82,7 +82,7 @@ public class DeathCanvasScript : MonoBehaviour {
     }
 
     public void GoNext() {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Spaceship");
     }
 
     public void OnContinue() {
