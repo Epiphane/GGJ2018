@@ -67,6 +67,8 @@ public class DeathHandler : MonoBehaviour {
 
 	public void EasyWayOut()  {
 		buttonLayer.SetActive (false);
+
+		FindObjectOfType <PlayerScript> ().Die ("ALTRUISM");
 	}
 
 	public void SetBGVisible(bool visible) {

@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8d42a3afd7a4dd19c6d2b1a061fc34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldShowInput: 0
   textInput: {fileID: 114932240663982670}
 --- !u!114 &114121440659072224
 MonoBehaviour:
@@ -529,7 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.50865054, g: 0.8235294, b: 0.536881, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -632,9 +633,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Die
-        m_Mode: 5
+      - m_Target: {fileID: 114804292596452872}
+        m_MethodName: EasyWayOut
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

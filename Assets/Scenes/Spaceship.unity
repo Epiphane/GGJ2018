@@ -817,6 +817,30 @@ Prefab:
       propertyPath: m_Name
       value: YoureDeadCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1972345214260870, guid: 28a624d3fc5814f67814dec024d7bcb0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114768050037707874, guid: 28a624d3fc5814f67814dec024d7bcb0,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1743063994}
+    - target: {fileID: 114768050037707874, guid: 28a624d3fc5814f67814dec024d7bcb0,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EasyWayOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 114768050037707874, guid: 28a624d3fc5814f67814dec024d7bcb0,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114628150755462028, guid: 28a624d3fc5814f67814dec024d7bcb0,
+        type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28a624d3fc5814f67814dec024d7bcb0, type: 2}
   m_IsPrefabParent: 0
@@ -5337,6 +5361,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1743063994 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114804292596452872, guid: 28a624d3fc5814f67814dec024d7bcb0,
+    type: 2}
+  m_PrefabInternal: {fileID: 363824042}
+  m_Script: {fileID: 11500000, guid: f87f58de652c14ccb8813edb6bf4b21d, type: 3}
 --- !u!1 &1769161086
 GameObject:
   m_ObjectHideFlags: 0
