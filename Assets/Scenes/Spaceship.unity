@@ -4749,8 +4749,17 @@ MonoBehaviour:
   audioSource: {fileID: 266217165}
   textToSay: 'INITIALIZING...
 
-    I HATE YOU. GO AWAY.
+    ZZ TRISTON. BRIDGE. 12.00Z8733
 
+
+    Status Report
+
+    System B: Damaged.
+
+    System C: Inactive.
+
+
+    No activity detected, system going to sleep.
 
     <PRESS [ENTER] TO CONTINUE>'
   shownText: 0
