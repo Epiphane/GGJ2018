@@ -2544,6 +2544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeMixer: {fileID: 24100000, guid: a14cb7e2e127abb42b64f2c0b5a36622, type: 2}
   audioSource: {fileID: 867100836}
+  brrSource: {fileID: 1971183109}
   wohPrefab: {fileID: 1626572366814868, guid: e5565622f887aa74b9eba50a19685a0e, type: 2}
   wohsPerLoop: 4
   droneSprite: {fileID: 305694332}
@@ -2696,7 +2697,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

@@ -55,7 +55,7 @@ public class DeathCanvasScript : MonoBehaviour {
         animationTime += Time.deltaTime;
 
         float opacity = Mathf.Clamp(animationTime / 1.0f, 0, 1);
-        background.color = new Color(0, 0, 0, opacity * 0.9f);
+        background.color = new Color(0, 0, 0, opacity * 0.7f);
 
         if (animationTime > 1.0f) {
             toDrop.localPosition = new Vector3(0, EaseOutBounce(animationTime - 1.5f, 1250, 1250, 2), 0);

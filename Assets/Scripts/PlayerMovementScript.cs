@@ -43,19 +43,20 @@ public class PlayerMovementScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
         Vector3 velocity = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
 
-        brrSource.volume = 0.125f + 0.125f * Mathf.Min(Input.GetAxis("Horizontal") + Input.GetAxis("Vertical"), 1);
+        float input = velocity.magnitude + rigidBody.velocity.magnitude;
+        brrSource.volume = 0.125f * input;
 
         //GetComponent<Rigidbody2D>().velocity = velocity * 0.5f;
-        Rigidbody2D rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.AddForce(5 * (new Vector2(velocity.x, velocity.y)));
         velocity = rigidBody.velocity;
         sprite.rotation = Quaternion.FromToRotation(Vector3.up, velocity);
 
         float MIN_TO_MOVE = 0.5f;
         float speed = velocity.magnitude;
-        droneSprite.color = new Color(1, 1, 1, brrSource.volume + speed); // Mathf.Pow(audioSource.volume * (Mathf.Sin(opacity) + 1) / 2, 2));
+        droneSprite.color = new Color(1, 1, 1, input); // Mathf.Pow(audioSource.volume * (Mathf.Sin(opacity) + 1) / 2, 2));
 
         bool newMoving = (speed > MIN_TO_MOVE);
         if (newMoving != moving) {
@@ -64,7 +65,7 @@ public class PlayerMovementScript : MonoBehaviour {
                 opacity = 0;
             }
             else {
-                audioSource.Stop();
+                //audioSource.Stop();
                 audioSource.volume = 0;
                 //droneSprite.color = new Color(1, 1, 1, 0);
             }
