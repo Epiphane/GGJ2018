@@ -58,7 +58,7 @@ public class AudioSourceScript : MonoBehaviour {
         SpawnLight();
         repeatDelay += delayAddPerPing;
         cooldown = repeatDelay;
-        numPings--;
+        //numPings--;
     }
 
     void SpawnLight () {
