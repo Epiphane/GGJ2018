@@ -49,8 +49,9 @@
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
 				fixed4 sound = tex2D(_SoundTex, i.uv);
+				//return col;
 
-				float brightness = (max(max(sound.r, sound.g), sound.b));
+				float brightness = max(max(sound.r, sound.g), sound.b);
 				col.r *= brightness;
 				col.g *= brightness;
 				col.b *= brightness;
