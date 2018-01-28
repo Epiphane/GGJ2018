@@ -75,7 +75,7 @@ public class BackendScript : MonoBehaviour {
 
     public void ReportDeath(Vector2 position, string message) {
         if (message == "") {
-            return;
+            SceneManager.LoadScene("Spaceship");
         }
 
         EntityData data = new EntityData();
