@@ -879,7 +879,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1972345214260870, guid: 28a624d3fc5814f67814dec024d7bcb0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114768050037707874, guid: 28a624d3fc5814f67814dec024d7bcb0,
         type: 2}
@@ -900,6 +900,11 @@ Prefab:
         type: 2}
       propertyPath: m_RaycastTarget
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224229649272921302, guid: 28a624d3fc5814f67814dec024d7bcb0,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -138.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28a624d3fc5814f67814dec024d7bcb0, type: 2}
