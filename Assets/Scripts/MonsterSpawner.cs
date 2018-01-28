@@ -10,6 +10,9 @@ public class MonsterSpawner : MonoBehaviour
     [SerializeField]
     private GameObject _monsterPrefab;
 
+    [SerializeField]
+    private float _monsterLifetime = 5.0f;
+
     void Update () {
         if (activateAfterThis == null || activateAfterThis.hasBeenActivatedBefore) {
             canSpawn = true;
@@ -24,6 +27,7 @@ public class MonsterSpawner : MonoBehaviour
             var monsterAI = monsterGO.GetComponent<MonsterAI>();
 
             monsterGO.transform.SetParent(transform, false);
+            monsterAI.TimeToDie = _monsterLifetime;
             monsterAI.StartFollowingPlayer();
         }
     }

@@ -13,6 +13,8 @@ public class MonsterAI : MonoBehaviour
     [SerializeField]
     private AudioClip[] _spawnAudio;
 
+    public float TimeToDie { get { return _timeToDie; } set { _timeToDie = value; } }
+
     private void Start()
     {
         if (_spawnAudio.Length > 0)
