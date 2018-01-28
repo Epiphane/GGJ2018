@@ -85,7 +85,7 @@ public class PlayerMovementScript : MonoBehaviour {
             if (opacity > Mathf.PI * 2) {
                 opacity -= Mathf.PI * 2;
             }
-            droneSprite.color = new Color(1, 1, 1, Mathf.Pow(audioSource.volume * (Mathf.Sin(opacity) + 1) / 2, 2));
+            droneSprite.color = new Color(1, 1, 1, audioSource.volume * 2); // Mathf.Pow(audioSource.volume * (Mathf.Sin(opacity) + 1) / 2, 2));
         }
 
     }
