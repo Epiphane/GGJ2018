@@ -10,6 +10,10 @@ public class TerminalScript : MonoBehaviour {
     public Sprite[] turningOnSounds;
     public AudioSource audioSource;
 
+	[Multiline]
+	public string textToSay;
+	public bool shownText = false;
+
     private float level = 0;
     private bool active = false;
 
@@ -21,11 +25,17 @@ public class TerminalScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (active && level < turningOnSprites.Length - 1) {
-            level += Time.deltaTime * 2;
+			level += Time.deltaTime * 2;
 
-            sprite.sprite = turningOnSprites[(int) Mathf.Floor(level)];
-            sound.sprite = turningOnSounds[(int)Mathf.Floor(level)];
-        }
+			sprite.sprite = turningOnSprites [(int)Mathf.Floor (level)];
+			sound.sprite = turningOnSounds [(int)Mathf.Floor (level)];
+		} else if (active) {
+			// MAAAAX POWERRRRRR
+			if (!shownText) {
+				shownText = true;
+				FindObjectOfType<OneCharAtATime> ().ShowTextIncrementally (textToSay, false);
+			}
+		}
         else if (!active && level > 0) {
             level -= Time.deltaTime * 2;
             if (level < 0) {
@@ -35,6 +45,7 @@ public class TerminalScript : MonoBehaviour {
             sprite.sprite = turningOnSprites[(int)Mathf.Floor(level)];
             sound.sprite = turningOnSounds[(int)Mathf.Floor(level)];
         }
+
 	}
 
     void OnTriggerEnter2D (Collider2D other) {

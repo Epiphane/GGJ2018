@@ -28,7 +28,7 @@ public class DeathHandler : MonoBehaviour {
 
 		currState = AWAITING_INPUT;
 
-		transform.Find ("DeathMessage").GetComponent<OneCharAtATime> ().ShowTextIncrementally ("CATASTROPHIC SYSTEM FAILURE:\n\n" + reason + "\n\nDRONE UNRECOVERABLE\n\nSEND TRANSMISSION FROM CURRENT LOCATION:");
+		transform.Find ("DeathMessage").GetComponent<OneCharAtATime> ().ShowTextIncrementally ("CATASTROPHIC SYSTEM FAILURE:\n\n" + reason + "\n\nDRONE UNRECOVERABLE\n\nSEND TRANSMISSION FROM CURRENT LOCATION:", true);
 		transform.Find ("DeathOverlay").GetComponent<Image> ().color = new Color (0.2f, 0.2f, 0.2f, 0.8f);
 		SetBGVisible (true);
 	}

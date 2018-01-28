@@ -14,16 +14,25 @@ public class OneCharAtATime : MonoBehaviour {
 	// text thus far
 	string revealedMessage = "";
 	string finalMessage = "";
+
+	// Whether or not we prompt for user input after this
+	public bool shouldShowInput;
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.anyKeyDown && finalMessage.Length > 0) {
 			revealedMessage = finalMessage;
 			GetComponent<Text> ().text = revealedMessage;
-			FinishedText ();
+			ShowInput ();
 		}
 
-		if (finalMessage.Length > 0 && !revealedMessage.Equals(finalMessage) && framesToNextTick-- < 0) {
+		// Showing regular message. Close on enter press.
+		if (!shouldShowInput && Input.GetKeyDown(KeyCode.Return) && revealedMessage == finalMessage) {
+			DoneForNow ();
+			FindObjectOfType<DeathHandler> ().ChickenOut ();
+		}
+
+		if (finalMessage.Length > 0 && !revealedMessage.Equals(finalMessage) && --framesToNextTick < 0) {
 			framesToNextTick = FRAMES_PER_TICK;
 
 			char char_to_reveal = finalMessage [charactersRevealed++];
@@ -32,23 +41,30 @@ public class OneCharAtATime : MonoBehaviour {
 			if (char_to_reveal == '\n')
 				framesToNextTick = FRAMES_PER_PAUSE;
 
+			if (char_to_reveal == '.')
+				framesToNextTick = FRAMES_PER_PAUSE / 2;
+
 			GetComponent<Text> ().text = revealedMessage;
 
 			if (finalMessage == revealedMessage)
-				FinishedText ();
+				ShowInput ();
 		}
 	}
 
 	public InputField textInput;
-	void FinishedText()
+	void ShowInput()
 	{
+		if (!shouldShowInput)
+			return;
+		
 		textInput.gameObject.SetActive (true);
 		textInput.Select();
 		textInput.ActivateInputField();
 	}
 
-	public void ShowTextIncrementally(string message)
+	public void ShowTextIncrementally(string message, bool shouldShowInput)
 	{
+		this.shouldShowInput = shouldShowInput;
 		revealedMessage = "";
 		finalMessage = message;
 		charactersRevealed = 0;
