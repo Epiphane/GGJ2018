@@ -59,5 +59,7 @@ public class OneCharAtATime : MonoBehaviour {
 		GetComponent<Text> ().text = "";
 		finalMessage = "";
 		revealedMessage = "";
+
+		textInput.gameObject.SetActive (false);
 	}
 }

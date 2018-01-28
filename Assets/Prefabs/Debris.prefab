@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50791129222146902}
   - component: {fileID: 61535137011581984}
   m_Layer: 9
-  m_Name: debris
+  m_Name: Debris
   m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

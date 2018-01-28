@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class BackendScript : MonoBehaviour {
 
@@ -68,6 +69,8 @@ public class BackendScript : MonoBehaviour {
         if (www.isNetworkError || www.isHttpError) {
             Debug.Log("OH NO NETWORK ERROR: " + www.error);
         }
+			
+		SceneManager.LoadScene("Main");
     }
 
     public void ReportDeath(Vector2 position, string message) {

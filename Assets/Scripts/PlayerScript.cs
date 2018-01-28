@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour {
     }
 
     public void SendTransmission() {
-		FindObjectOfType<DeathHandler>().ShowDeath(new Vector2(transform.position.x, transform.position.y), "");
+		FindObjectOfType<DeathHandler>().ShowConfirmation(new Vector2(transform.position.x, transform.position.y));
         this.enabled = false;
 
         GetComponent<PlayerMovementScript>().Stop();
