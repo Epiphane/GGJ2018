@@ -559,6 +559,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &314271661 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324,
+    type: 2}
+  m_PrefabInternal: {fileID: 1784600045}
 --- !u!1 &411501956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2370,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1615149594}
+--- !u!1001 &1784600045
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2098865305}
+    m_Modifications:
+    - target: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727988454304214, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1fc28cacdc9114423ada7529922bc324, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1888577571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,6 +3165,7 @@ Transform:
   m_Children:
   - {fileID: 570489169}
   - {fileID: 1013269604}
+  - {fileID: 314271661}
   m_Father: {fileID: 2017323436}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
