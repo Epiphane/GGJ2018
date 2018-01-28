@@ -9,7 +9,21 @@ public class MonsterAI : MonoBehaviour
     [SerializeField]
     private float _speed = 1.0f;
     [SerializeField]
-    private float _timeToDie = 15.0f;
+    private float _timeToDie = 5.0f;
+    [SerializeField]
+    private AudioClip[] _spawnAudio;
+
+    private void Start()
+    {
+        if (_spawnAudio.Length > 0)
+        {
+            var spawnAudioIndex = Random.Range(0, _spawnAudio.Length);
+
+            var audioSource = GetComponent<AudioSource>();
+            audioSource.clip = _spawnAudio[spawnAudioIndex];
+            audioSource.Play();
+        }
+    }
 
     // Update is called once per frame
     void Update()
