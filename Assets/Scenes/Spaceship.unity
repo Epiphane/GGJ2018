@@ -2908,8 +2908,7 @@ MonoBehaviour:
   textToSay: "INITIALIZING...\r\n\r\nZZ TRITON. MEDICAL BAY. 18:15 P8732\r\n\r\nFirst
     aid kit checked out for crew member eldab.\r\n\r\nZZ TRITON. MEDICAL BAY. 9:45
     P8733\r\n\r\nOxygen suit checked out for crew member fjork.\r\nFirst aid kit checked
-    out for crew member fjork.\r\n\r\nZZ TRITON. MEDICAL BAY. 12:10 P8733\r\n\r\nConnection
-    lost to BRIDGE. System going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
+    out for crew member fjork.\r\n\r\n<PRESS [ENTER] TO CONTINUE>"
   shownText: 0
 --- !u!212 &1095918037
 SpriteRenderer:
@@ -3252,7 +3251,7 @@ MonoBehaviour:
     complete. Neptonium detected on planet surface.\r\n\r\nZZ TRITON. CAPTAINS BAY.
     18:10 P8732\r\n\r\nfjork: Course set for planet surface\r\neldab: Course reset.\r\neldab:
     System locked for 12 hours.\r\n\r\nZZ TRITON. CAPTAINS BAY. 6:10 P8733\r\n\r\nfjork:
-    Course set for planet surface."
+    Course set for planet surface.\r\n\r\n<PRESS [ENTER] TO CONTINUE>"
   shownText: 0
 --- !u!212 &1257209909
 SpriteRenderer:
@@ -8112,8 +8111,7 @@ MonoBehaviour:
     permission.\r\nfjork: Early breakfast enabled.\r\n\r\nZZ TRITON. MESS HALL. 10:30
     P8733\r\n\r\neldab: Login failed. This incident will be reported.\r\neldab: Mess
     hall doors cannot be closed during lounge hours.\r\neldab: Connection closed due
-    to timeout.\r\n\r\nZZ TRITON. MESS HALL. 12:10 P8733\r\n\r\nConnection lost to
-    BRIDGE. System going to sleep.\r\n<PRESS [ENTER] TO CONTINUE>"
+    to timeout.\r\n\r\n<PRESS [ENTER] TO CONTINUE>"
   shownText: 0
 --- !u!212 &1784428511
 SpriteRenderer:
